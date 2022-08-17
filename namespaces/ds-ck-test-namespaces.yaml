@@ -1,0 +1,56 @@
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ds-ck-test-build
+  labels:
+    app : ds-ck-test
+    team: ckavili
+    build-namespace: ds-ck-test-build
+    size: small
+    environment: build
+    goldilocks.fairwinds.com/enabled: "true"
+    argocd.argoproj.io/managed-by: ds-ck-test-build
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ds-ck-test-dev
+  labels:
+    app : ds-ck-test
+    team: ckavili
+    build-namespace: ds-ck-test-build
+    size: small
+    environment: dev
+    goldilocks.fairwinds.com/enabled: "true"
+    argocd.argoproj.io/managed-by: ds-ck-test-build
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ds-ck-test-qa
+  labels:
+    app : ds-ck-test
+    team: ckavili
+    build-namespace: ds-ck-test-build
+    size: small
+    environment: qa
+    goldilocks.fairwinds.com/enabled: "true"
+    argocd.argoproj.io/managed-by: ds-ck-test-build
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ds-ck-test-prod
+  labels:
+    app : ds-ck-test
+    team: ckavili
+    build-namespace: ds-ck-test-build
+    size: small
+    environment: prod
+    goldilocks.fairwinds.com/enabled: "true"
+    argocd.argoproj.io/managed-by: ds-ck-test-build
